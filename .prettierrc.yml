@@ -1,0 +1,10 @@
+semi: true
+arrowParens: avoid
+
+# quotes
+singleQuote: true
+jsxSingleQuote: true
+
+# tabs
+tabs: true
+tabWidth: 4
