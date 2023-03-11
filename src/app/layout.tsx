@@ -1,6 +1,7 @@
 import Appbar from '@/components/Appbar';
 import className from '@/util/className';
 import { Fira_Sans } from 'next/font/google';
+import { cookies } from 'next/headers';
 
 // Styling
 import './global.scss';
@@ -27,7 +28,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang='en' className={className('theme:light', firaSans.variable)}>
+        <html lang='en' className={className(`theme:${cookies().get('theme')?.value ?? 'system'}`, firaSans.variable)}>
             <body>
                 <Appbar />
                 {children}

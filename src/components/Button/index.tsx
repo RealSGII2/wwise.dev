@@ -21,7 +21,7 @@ const defaultProps: ButtonProps = {
     variant: 'primary',
 };
 
-const generateClassName = ({ size, variant, join }: ButtonProps) => {
+export const generateClassName = ({ size, variant, join }: ButtonProps) => {
     return classNameFrom(
         styles,
         'button',
@@ -41,7 +41,9 @@ const Button: FC<ButtonProps & _ButtonProps> = preProps => {
     );
 
     return (
-        <button {...props} className={generateClassName(props)}>{actualChildren}</button>
+        <button {...props} className={generateClassName(props)}>
+            {actualChildren}
+        </button>
     );
 };
 
@@ -61,7 +63,11 @@ export const LinkButton: FC<LinkButtonProps> = preProps => {
         additionalProps.referrerPolicy = 'no-referrer';
 
     return (
-        <a href={href} {...additionalProps} className={generateClassName(props)}>
+        <a
+            href={href}
+            {...additionalProps}
+            className={generateClassName(props)}
+        >
             {actualChildren}
         </a>
     );

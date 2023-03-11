@@ -7,6 +7,10 @@ import Statistic from '@/components/Statistic';
 export default function IndexPage() {
     return (
         <>
+            {/* 'hero-image': (url('/hero-sun.png'), url('/hero-moon.png')), */}
+            <link rel='preload' href='/hero-sun.png' />
+            <link rel='preload' href='/hero-moon.png' />
+
             <main
                 style={{
                     // backgroundColor: 'var(--bg-raised)',
@@ -51,7 +55,7 @@ export default function IndexPage() {
                         </Row>
                     </FadeIn>
 
-                    <Row gap={1}>
+                    <Row gap={2}>
                         <FadeIn delay={600}>
                             <Statistic label='Happy Users (2022)'>
                                 58,920

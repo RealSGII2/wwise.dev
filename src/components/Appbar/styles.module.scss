@@ -2,13 +2,14 @@
 .appbar {
     position: sticky;
 
-    top: 0;
     left: 0;
     right: 0;
 }
 
 .fancyBar {
     height: 8px;
+
+    top: 0;
 
     background-color: var(--brand-mix);
     background-image: linear-gradient(
@@ -25,6 +26,8 @@
 }
 
 .appbar {
+    top: 8px;
+    
     height: 64px;
 
     // background-color: var(--bg-raised);

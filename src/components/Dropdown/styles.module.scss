@@ -1,0 +1,51 @@
+.content {
+    min-width: 100px;
+
+    background-color: var(--bg-raised);
+
+    box-shadow: var(--shadow-medium);
+
+    border-radius: 4px;
+
+    padding: 2px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 500;
+
+    color: var(--fg-body);
+
+    padding: 12px 40px 4px 14px;
+}
+
+.item {
+    position: relative;
+
+    outline: none;
+
+    height: 36px;
+    padding: 0 40px 0 14px;
+
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:focus {
+        background-color: var(--bg-default);
+    }
+    
+    svg:last-child {
+        position: absolute;
+
+        top: 50%;
+        right: 12px;
+
+        transform: translateY(-50%);
+
+        fill: var(--fg-brand)
+    }
+}

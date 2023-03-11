@@ -6,7 +6,7 @@ $themeMap: (
     'bg-raised': (#ffffff, #2c2e33),
     'fg-default': (#000000, #ced4da),
     'fg-body': (#5f6b7d, #adb5bd),
-    'fg-brand': (#0781be, #5ec1d1),
+    'fg-brand': (#0092d0, #00ccec),
     'fg-button-primary': (#000000, #8bcbd8),
     'brand-gradient': (
         linear-gradient(
@@ -40,7 +40,8 @@ $themeMap: (
     'brand-bg': (rgba(7, 129, 190, 0.2), rgba(94, 193, 209, 0.2)),
     'hero-background': (#fff, #222435),
     'hero-image': (url('/hero-sun.png'), url('/hero-moon.png')),
-    'announcement-bg': (#b5daec, #2e4454)
+    'announcement-bg': (#b5daec, #2e4454),
+    'shadow-medium': (0 4px 8px rgba(196, 199, 206, 0.50), 0 4px 8px rgba(16, 19, 26, 0.25))
 );
 
 // Constant variables
