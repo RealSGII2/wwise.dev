@@ -27,7 +27,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang='en' className={className('theme:dark', firaSans.variable)}>
+        <html lang='en' className={className('theme:light', firaSans.variable)}>
             <body>
                 <Appbar />
                 {children}

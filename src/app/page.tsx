@@ -10,10 +10,10 @@ export default function IndexPage() {
             <main
                 style={{
                     // backgroundColor: 'var(--bg-raised)',
-                    backgroundColor: '#222435',
+                    backgroundColor: 'var(--hero-background)',
                     height: 'calc(100% - 72px)',
                     paddingTop: 128,
-                    backgroundImage: 'url("/wwise-tree-bg-small-notrees-purple.png")',
+                    backgroundImage: 'var(--hero-image)',
                     backgroundSize: 'cover',
                 }}
             >

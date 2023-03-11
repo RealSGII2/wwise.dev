@@ -66,7 +66,7 @@ export default function IndexErrorPage() {
             <main
                 style={{
                     // backgroundColor: 'var(--bg-raised)',
-                    backgroundColor: '#222435',
+                    backgroundColor: 'var(--hero-background)',
                     height: 'calc(100% - 72px)',
                     paddingTop: 128,
                 }}

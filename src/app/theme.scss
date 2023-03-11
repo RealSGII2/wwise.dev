@@ -4,33 +4,61 @@ $themeMap: (
     // 'variable-name': ('light theme value', 'dark theme value'),
     'bg-default': (#f1f4f9, #25262b),
     'bg-raised': (#ffffff, #2c2e33),
-
     'fg-default': (#000000, #ced4da),
-    'fg-body': (#5F6B7D, #adb5bd),
-    'fg-brand': (#0781be, #5EC1D1),
+    'fg-body': (#5f6b7d, #adb5bd),
+    'fg-brand': (#0781be, #5ec1d1),
     'fg-button-primary': (#000000, #8bcbd8),
-
-    'brand-gradient-text-left': (var(--brand-gradient-saturated-left), var(--brand-gradient-left)),
-    'brand-gradient-text-right': (var(--brand-gradient-saturated-right), var(--brand-gradient-right)),
+    'brand-gradient': (
+        linear-gradient(
+            to right,
+            hsl(216deg 94% 51%) 0%,
+            hsl(208deg 100% 49%) 20%,
+            hsl(202deg 100% 44%) 40%,
+            hsl(192deg 100% 37%) 60%,
+            hsl(179deg 100% 30%) 80%,
+            hsl(166deg 97% 31%) 100%
+        ),
+        linear-gradient(
+            45deg,
+            hsl(216deg 93% 72%) 0%,
+            hsl(199deg 100% 55%) 20%,
+            hsl(192deg 100% 48%) 40%,
+            hsl(185deg 100% 45%) 60%,
+            hsl(176deg 100% 42%) 80%,
+            hsl(159deg 66% 57%) 100%
+        )
+    ),
+    'brand-gradient-text-left': (
+        var(--brand-gradient-saturated-left),
+        var(--brand-gradient-left)
+    ),
+    'brand-gradient-text-right': (
+        var(--brand-gradient-saturated-right),
+        var(--brand-gradient-right)
+    ),
     'brand-focus-color': (rgba(94, 193, 209, 0.4), rgba(94, 193, 209, 0.4)),
+    'brand-bg': (rgba(7, 129, 190, 0.2), rgba(94, 193, 209, 0.2)),
+    'hero-background': (#fff, #222435),
+    'hero-image': (url('/hero-sun.png'), url('/hero-moon.png')),
+    'announcement-bg': (#b5daec, #2e4454)
 );
 
 // Constant variables
 :root {
-    --brand-gradient-desaturated-left: #8CB8FA;
-    --brand-gradient-desaturated-right: #89D9BD;
-    
-    --brand-gradient-left: #73A9FA;
-    --brand-gradient-right: #48DAA7;
-    
-    --brand-gradient-saturated-left: #0A6AFA;
-    --brand-gradient-saturated-right: #48daa7;
+    --brand-gradient-desaturated-left: #8cb8fa;
+    --brand-gradient-desaturated-right: #89d9bd;
+
+    --brand-gradient-left: #73a9fa;
+    --brand-gradient-right: #48daa7;
+
+    --brand-gradient-saturated-left: #0a6afa;
+    --brand-gradient-saturated-right: #029c75;
 
     --focus-ring: 0 0 0 3px var(--brand-focus-color);
 }
 
 // The className specifically is 'theme:light'
-html, .theme\:light {
+.theme\:light {
     color-scheme: light;
 
     @each $key, $valuePair in $themeMap {
@@ -39,11 +67,10 @@ html, .theme\:light {
 }
 
 // Here, it's 'theme:dark'
-body, .theme\:dark {
+.theme\:dark {
     color-scheme: dark;
 
     @each $key, $valuePair in $themeMap {
         --#{$key}: #{list.nth($valuePair, 2)};
     }
 }
-

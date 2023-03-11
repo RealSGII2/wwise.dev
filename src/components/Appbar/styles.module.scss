@@ -21,14 +21,14 @@
 .announcementBar {
     padding: 1rem 0;
     // background-color: rgb(94, 193, 209, 0.2);
-    background-color: #2b3c4c;
+    background-color: var(--announcement-bg);
 }
 
 .appbar {
     height: 64px;
 
     // background-color: var(--bg-raised);
-    background-color: #222435;
+    background-color: var(--hero-background);
 
     // The `ContentContainer` holding the sections.
     > div {

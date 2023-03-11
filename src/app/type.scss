@@ -36,11 +36,14 @@
 }
 
 .brandGradientText {
-    background-image: linear-gradient(
-        to right,
-        var(--brand-gradient-left),
-        var(--brand-gradient-right)
-    );
+    // background-image: linear-gradient(
+    //     to right,
+    //     var(--brand-gradient-text-left),
+    //     var(--brand-gradient-text-right)
+    // );
+
+    background-image: var(--brand-gradient);
+
     background-clip: text;
     color: transparent;
 }
