@@ -1,0 +1,46 @@
+.a {
+    position: relative;
+
+    text-decoration: none;
+    color: var(--fg-brand);
+
+    &::after {
+        content: '';
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        opacity: 0.5;
+        box-shadow: 0 2px currentColor;
+
+        transition: 85ms ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        box-shadow: 0 3px currentColor;
+    }
+}
+
+.h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.heroP {
+    font-size: 20px;
+    color: var(--fg-body);
+}
+
+.brandGradientText {
+    background-image: linear-gradient(
+        to right,
+        var(--brand-gradient-left),
+        var(--brand-gradient-right)
+    );
+    background-clip: text;
+    color: transparent;
+}

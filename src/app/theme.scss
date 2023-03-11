@@ -1,0 +1,49 @@
+@use 'sass:list';
+
+$themeMap: (
+    // 'variable-name': ('light theme value', 'dark theme value'),
+    'bg-default': (#f1f4f9, #25262b),
+    'bg-raised': (#ffffff, #2c2e33),
+
+    'fg-default': (#000000, #ced4da),
+    'fg-body': (#5F6B7D, #adb5bd),
+    'fg-brand': (#0781be, #5EC1D1),
+    'fg-button-primary': (#000000, #8bcbd8),
+
+    'brand-gradient-text-left': (var(--brand-gradient-saturated-left), var(--brand-gradient-left)),
+    'brand-gradient-text-right': (var(--brand-gradient-saturated-right), var(--brand-gradient-right)),
+    'brand-focus-color': (rgba(94, 193, 209, 0.4), rgba(94, 193, 209, 0.4)),
+);
+
+// Constant variables
+:root {
+    --brand-gradient-desaturated-left: #8CB8FA;
+    --brand-gradient-desaturated-right: #89D9BD;
+    
+    --brand-gradient-left: #73A9FA;
+    --brand-gradient-right: #48DAA7;
+    
+    --brand-gradient-saturated-left: #0A6AFA;
+    --brand-gradient-saturated-right: #48daa7;
+
+    --focus-ring: 0 0 0 3px var(--brand-focus-color);
+}
+
+// The className specifically is 'theme:light'
+html, .theme\:light {
+    color-scheme: light;
+
+    @each $key, $valuePair in $themeMap {
+        --#{$key}: #{list.nth($valuePair, 1)};
+    }
+}
+
+// Here, it's 'theme:dark'
+body, .theme\:dark {
+    color-scheme: dark;
+
+    @each $key, $valuePair in $themeMap {
+        --#{$key}: #{list.nth($valuePair, 2)};
+    }
+}
+
