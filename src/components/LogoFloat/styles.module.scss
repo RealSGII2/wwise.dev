@@ -1,0 +1,69 @@
+.wrapper {
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    animation: floatAvatar 7500ms -823ms ease-in-out infinite;
+
+    will-change: transition;
+
+    border-radius: 12px;
+}
+
+.logoFloat {
+    > g {
+        animation: float 7500ms ease-in-out infinite;
+
+        will-change: transition;
+
+        @for $i from 0 to 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: -#{$i * 823ms};
+            }
+        }
+    }
+}
+
+@keyframes float {
+    $amount: 1px;
+
+    from {
+        transform: translateY(-$amount);
+    }
+
+    50% {
+        transform: translateY($amount);
+    }
+
+    to {
+        transform: translateY(-$amount);
+    }
+}
+
+@keyframes floatAvatar {
+    $amount: 10px;
+
+    from {
+        transform: translate(-50%, calc(-50% - $amount));
+    }
+
+    50% {
+        transform: translate(-50%, calc(-50% + $amount));
+    }
+
+    to {
+        transform: translate(-50%, calc(-50% - $amount));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .avatar, .logoFloat > g {
+        animation: none !important;
+    }
+}

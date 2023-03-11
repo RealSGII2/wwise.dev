@@ -3,6 +3,7 @@ import ContentContainer from '@/components/ContentContainer';
 import FadeIn from '@/components/FadeIn';
 import Row from '@/components/Row';
 import Statistic from '@/components/Statistic';
+import LogoFloat from '../components/LogoFloat';
 
 export default function IndexPage() {
     return (
@@ -70,6 +71,62 @@ export default function IndexPage() {
                     </Row>
                 </ContentContainer>
             </main>
+
+            <ContentContainer>
+                <h1 className='h2 brandGradientText smallCentered'>About me</h1>
+
+                <LogoFloat />
+
+                <p
+                    className='heroP'
+                    style={{ textAlign: 'center', color: 'var(--fg-default)' }}
+                >
+                    Hi! I'm William Wise, an aspiring web developer and designer
+                    based in Arkansas. I like to build and explore creative
+                    things.
+                </p>
+
+                <p className='heroP'>
+                    My first experience dates way back to 2013, when I was a
+                    child who found{' '}
+                    <a
+                        href='https://wix.com/'
+                        target='_blank'
+                        referrerPolicy='no-referrer'
+                        className='a'
+                    >
+                        Wix
+                    </a>
+                    . I designed plenty of useless websites that served no
+                    purpose, but it helped spark my interest in actually making
+                    websites and being creative.
+                </p>
+
+                <p className='heroP'>
+                    Three years later, I got tired of Wix's pricing and
+                    limitations. After seeing my friend learn HTML, I decided to
+                    follow his path. As the years go by, I learn more and more
+                    frameworks: EJS, Vue.js, Nuxt.js, React.js, then finally
+                    Next.js. As of now, my favourite toolset is Next.js
+                    (Typescript) styled with Scss.
+                </p>
+
+                <p className='heroP'>
+                    In my free time, I enjoy other creative works such as
+                    graphic design, branding, and designing fonts, as well as
+                    hiking, biking, and playing video games.
+                </p>
+            </ContentContainer>
+
+            <ContentContainer>
+                <h1 className='h2 brandGradientText smallCentered' style={{ marginTop: '86px' }}>
+                    Featured Projects
+                </h1>
+
+<div style={{ height: '100vh' }} />
+            </ContentContainer>
+
+            <div style={{ height: '64px' }} />
         </>
     );
 }

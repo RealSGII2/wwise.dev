@@ -7,6 +7,7 @@ import { cookies } from 'next/headers';
 import './global.scss';
 import './type.scss';
 import './theme.scss';
+import ScrollListener from '@/components/ScrollListener';
 
 const firaSans = Fira_Sans({
     weight: ['400', '500', '700'],
@@ -30,6 +31,8 @@ export default function RootLayout({
     return (
         <html lang='en' className={className(`theme:${cookies().get('theme')?.value ?? 'system'}`, firaSans.variable)}>
             <body>
+                <ScrollListener />
+
                 <Appbar />
                 {children}
             </body>

@@ -41,7 +41,9 @@ $themeMap: (
     'hero-background': (#fff, #222435),
     'hero-image': (url('/hero-sun.png'), url('/hero-moon.png')),
     'announcement-bg': (#b5daec, #2e4454),
-    'shadow-medium': (0 4px 8px rgba(196, 199, 206, 0.50), 0 4px 8px rgba(16, 19, 26, 0.25))
+    'appbar-bg': (rgba(255, 255, 255, 0.75), rgba(34, 36, 53, 0.75)),
+    'shadow-small': (0 2px 4px rgba(196, 199, 206, 0.50), 0 2px 4px rgba(16, 19, 26, 0.25)),
+    'shadow-medium': (0 4px 8px rgba(196, 199, 206, 0.50), 0 4px 8px rgba(16, 19, 26, 0.25)),
 );
 
 // Constant variables

@@ -1,3 +1,15 @@
+.cover {
+    background-color: var(--hero-background);
+    height: 64px;
+    margin-top: -64px;
+}
+
+.fancyBar,
+.announcementBar,
+.appbar {
+    z-index: 50;
+}
+
 .fancyBar,
 .appbar {
     position: sticky;
@@ -27,11 +39,15 @@
 
 .appbar {
     top: 8px;
-    
+
     height: 64px;
 
-    // background-color: var(--bg-raised);
-    background-color: var(--hero-background);
+    background-color: var(--appbar-bg);
+
+    backdrop-filter: blur(24px);
+
+    transition: 175ms ease-out;
+    transition-property: background-color, box-shadow;
 
     // The `ContentContainer` holding the sections.
     > div {
@@ -64,5 +80,11 @@
             justify-content: flex-end;
             gap: 0.5rem;
         }
+    }
+
+    // State when the background is no longer purple on dark theme
+    :global(.notInHero) & {
+        background-color: var(--bg-raised);
+        box-shadow: var(--shadow-small);
     }
 }

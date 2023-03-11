@@ -30,9 +30,23 @@
     font-weight: 700;
 }
 
+.h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
 .heroP {
     font-size: 20px;
     color: var(--fg-body);
+
+    line-height: 1.5;
+}
+
+// Most other methods break the gradient
+.smallCentered {
+    width: fit-content;
+    display: block;
+    margin: auto;
 }
 
 .brandGradientText {

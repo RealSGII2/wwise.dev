@@ -4,7 +4,7 @@ export default function IndexLoadingPage() {
     return (
         <div
             style={{
-                backgroundColor: 'var(--bg-raised)',
+                backgroundColor: 'var(--hero-background)',
                 height: 'calc(100% - 72px)',
                 backgroundImage: 'url("/wwise-tree-bg-small-notrees.png")',
                 backgroundSize: 'cover',

@@ -11,10 +11,8 @@ const Appbar: FC = () => {
             <div className={styles.fancyBar} />
             <div className={styles.announcementBar}>
                 <ContentContainer>
-                    Welcome to the new version of my portfolio!{' '}
-                    <a className='a' href='#'>
-                        See what&apos;s different.
-                    </a>
+                    You're viewing the beta version of my portfolio. Not
+                    everything is complete, and some parts may be broken.
                 </ContentContainer>
             </div>
             <nav className={styles.appbar}>
@@ -64,6 +62,7 @@ const Appbar: FC = () => {
                     </section>
                 </ContentContainer>
             </nav>
+            <div className={styles.cover} />
         </>
     );
 };
