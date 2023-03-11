@@ -10,7 +10,7 @@ const Appbar: FC = () => {
             <div className={styles.fancyBar} />
             <div className={styles.announcementBar}>
                 <ContentContainer>
-                    Welcome to the new version of my portfolio! <a className='a' href="#">See what's different.</a>
+                    Welcome to the new version of my portfolio! <a className='a' href="#">See what&apos;s different.</a>
                 </ContentContainer>
             </div>
             <nav className={styles.appbar}>

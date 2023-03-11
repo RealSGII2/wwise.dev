@@ -65,7 +65,8 @@ export default function IndexErrorPage() {
         <>
             <main
                 style={{
-                    backgroundColor: 'var(--bg-raised)',
+                    // backgroundColor: 'var(--bg-raised)',
+                    backgroundColor: '#222435',
                     height: 'calc(100% - 72px)',
                     paddingTop: 128,
                 }}
@@ -100,7 +101,7 @@ export default function IndexErrorPage() {
                                 ) : (
                                     <>
                                         The thing you are looking for is not
-                                        here, or it doesn't exist.
+                                        here, or it doesn&apos;t exist.
                                     </>
                                 )}
                             </p>
