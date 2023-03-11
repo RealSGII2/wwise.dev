@@ -11,7 +11,7 @@ const Appbar: FC = () => {
             <div className={styles.fancyBar} />
             <div className={styles.announcementBar}>
                 <ContentContainer>
-                    You're viewing the beta version of my portfolio. Not
+                    You&apos;re viewing the beta version of my portfolio. Not
                     everything is complete, and some parts may be broken.
                 </ContentContainer>
             </div>

@@ -81,7 +81,7 @@ export default function IndexPage() {
                     className='heroP'
                     style={{ textAlign: 'center', color: 'var(--fg-default)' }}
                 >
-                    Hi! I'm William Wise, an aspiring web developer and designer
+                    Hi! I&apos;m William Wise, an aspiring web developer and designer
                     based in Arkansas. I like to build and explore creative
                     things.
                 </p>
@@ -103,7 +103,7 @@ export default function IndexPage() {
                 </p>
 
                 <p className='heroP'>
-                    Three years later, I got tired of Wix's pricing and
+                    Three years later, I got tired of Wix&apos;s pricing and
                     limitations. After seeing my friend learn HTML, I decided to
                     follow his path. As the years go by, I learn more and more
                     frameworks: EJS, Vue.js, Nuxt.js, React.js, then finally

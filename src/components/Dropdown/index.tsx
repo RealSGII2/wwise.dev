@@ -120,5 +120,6 @@ export const RadioItem = forwardRef<
         </DropdownMenuPrimitive.RadioItem>
     );
 });
+RadioItem.displayName = 'RadioItem';
 
 export const Separator = DropdownMenuPrimitive.Separator;
